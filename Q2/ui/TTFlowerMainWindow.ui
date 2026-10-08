@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>700</width>
+    <height>550</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Quản Lý Bán Hàng - Cửa Hàng Hoa Thanh Thản</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">
+    QMainWindow {
+        background-image: url(d:/Tuduylaptrinh/review_midterm/midterm1/Q2/images/flower_shop.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    QWidget#centralwidget {
+        background: transparent;
+    }
+    QGroupBox {
+        font-weight: bold;
+        font-size: 13px;
+        border: 1px solid #C8E6C9;
+        border-radius: 8px;
+        margin-top: 10px;
+        padding-top: 10px;
+        background-color: rgba(255, 255, 255, 205);
+    }
+    QGroupBox::title {
+        subcontrol-origin: margin;
+        subcontrol-position: top left;
+        padding: 0 5px;
+		color: #2E7D32;
+    }
+    QLabel {
+        font-size: 13px;
+        color: #333333;
+    }
+    QLineEdit {
+        border: 1px solid #BDBDBD;
+        border-radius: 4px;
+        padding: 5px;
+        font-size: 13px;
+        background-color: rgba(255, 255, 255, 220);
+    }
+    QLineEdit:focus {
+        border: 1px solid #4CAF50;
+        background-color: #FFFFFF;
+    }
+    QLineEdit[readOnly=&quot;true&quot;] {
+        background-color: rgba(232, 245, 233, 220);
+        color: #1B5E20;
+        font-weight: bold;
+    }
+    QPushButton {
+        background-color: rgba(76, 175, 80, 220);
+        color: white;
+        font-size: 13px;
+        font-weight: bold;
+        border-radius: 5px;
+        padding: 8px 15px;
+        min-width: 100px;
+    }
+    QPushButton:hover {
+        background-color: #43A047;
+    }
+    QPushButton:pressed {
+        background-color: #2E7D32;
+    }
+    QPushButton#pushButtonClear {
+        background-color: rgba(255, 152, 0, 220);
+    }
+    QPushButton#pushButtonClear:hover {
+        background-color: #FB8C00;
+    }
+    QPushButton#pushButtonClose {
+        background-color: rgba(229, 57, 53, 220);
+    }
+    QPushButton#pushButtonClose:hover {
+        background-color: #D32F2F;
+    }
+   </string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout_Main">
+    <property name="spacing">
+     <number>15</number>
+    </property>
+    <property name="leftMargin">
+     <number>20</number>
+    </property>
+    <property name="topMargin">
+     <number>20</number>
+    </property>
+    <property name="rightMargin">
+     <number>20</number>
+    </property>
+    <property name="bottomMargin">
+     <number>20</number>
+    </property>
+    <item>
+     <widget class="QLabel" name="labelHeader">
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>60</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>-1</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+        background-color: #2E7D32;
+        color: white;
+        border-radius: 8px;
+       </string>
+      </property>
+      <property name="text">
+       <string>CỬA HÀNG HOA THANH THẢN</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QGroupBox" name="groupBoxInput">
+      <property name="title">
+       <string>1. Chọn số lượng hoa mua:</string>
+      </property>
+      <layout class="QFormLayout" name="formLayoutInput">
+       <property name="horizontalSpacing">
+        <number>15</number>
+       </property>
+       <property name="verticalSpacing">
+        <number>12</number>
+       </property>
+       <item row="0" column="0">
+        <widget class="QLabel" name="labelDaLatQty">
+         <property name="text">
+          <string>Số lượng hoa Đà Lạt (Giảm 15%):</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QLineEdit" name="lineEditDaLatQty">
+         <property name="placeholderText">
+          <string>Nhập số lượng bó...</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="labelSapaQty">
+         <property name="text">
+          <string>Số lượng hoa Sapa (Nguyên giá):</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QLineEdit" name="lineEditSapaQty">
+         <property name="placeholderText">
+          <string>Nhập số lượng bó...</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayoutButtons">
+      <property name="spacing">
+       <number>15</number>
+      </property>
+      <item>
+       <widget class="QPushButton" name="pushButtonCalc">
+        <property name="text">
+         <string>Calc</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>../images/ethics.png</normaloff>../images/ethics.png</iconset>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButtonClear">
+        <property name="text">
+         <string>Clear</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>../images/delete.png</normaloff>../images/delete.png</iconset>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButtonClose">
+        <property name="text">
+         <string>Exit</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>../images/close.png</normaloff>../images/close.png</iconset>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QGroupBox" name="groupBoxOutput">
+      <property name="title">
+       <string>2. Thống kê bán hàng, Doanh thu:</string>
+      </property>
+      <layout class="QFormLayout" name="formLayoutOutput">
+       <property name="horizontalSpacing">
+        <number>15</number>
+       </property>
+       <property name="verticalSpacing">
+        <number>10</number>
+       </property>
+       <item row="0" column="0">
+        <widget class="QLabel" name="labelStatDaLatQty">
+         <property name="text">
+          <string>Số bó Đà Lạt đã bán:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QLineEdit" name="lineEditStatDaLatQty">
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="labelStatDaLatVal">
+         <property name="text">
+          <string>Thành tiền hoa Đà Lạt:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QLineEdit" name="lineEditStatDaLatVal">
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="labelStatSapaQty">
+         <property name="text">
+          <string>Số bó Sapa đã bán:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QLineEdit" name="lineEditStatSapaQty">
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0">
+        <widget class="QLabel" name="labelStatSapaVal">
+         <property name="text">
+          <string>Thành tiền hoa Sapa:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="1">
+        <widget class="QLineEdit" name="lineEditStatSapaVal">
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="0">
+        <widget class="QLabel" name="labelTotalRevenue">
+         <property name="font">
+          <font>
+           <pointsize>-1</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>TỔNG DOANH THU:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="1">
+        <widget class="QLineEdit" name="lineEditTotalRevenue">
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>700</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>pushButtonClose</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButtonClear</sender>
+   <signal>clicked()</signal>
+   <receiver>lineEditDaLatQty</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>349</x>
+     <y>238</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>454</x>
+     <y>137</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButtonClear</sender>
+   <signal>clicked()</signal>
+   <receiver>lineEditSapaQty</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>349</x>
+     <y>238</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>454</x>
+     <y>179</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
